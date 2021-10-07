@@ -9,7 +9,7 @@ START TRANSACTION;
     `nickname` varchar(33) NOT NULL,
     `password` varchar(256) NOT NULL,
     `timeleft` int(15) NOT NULL,
-    `enable` int(15) NOT NULL
+    `enable` int(15) NOT NULL,
     PRIMARY KEY (`id`),
     CONSTRAINT `skins__purchases` FOREIGN KEY (`server_id`) REFERENCES `servers` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
     );
