@@ -18,7 +18,7 @@
 		$fileName = "/modules_extra/skins_store/uploads/" . date("siH") . rand(100, 10000) . "_{$_FILES['image']['name']}";
 		
 		if(move_uploaded_file($_FILES['image']['tmp_name'], "{$_SERVER['DOCUMENT_ROOT']}{$fileName}")) {
-			if($pdo->query("INSERT INTO `skins__store`(`server_id`, `name`, `price`, `model_name`, `image`) VALUES ('{$_POST['server']}', '{$_POST['name']}', '{$_POST['price']}', '{$_POST['model']}', '{$fileName}')")) {
+			if($pdo->query("INSERT INTO `skins__store`(`server_id`, `skin_id`, `name`, `price`, `model_name`, `image`) VALUES ('{$_POST['server']}', `{$_POST['skin_id']}` '{$_POST['name']}', '{$_POST['price']}', '{$_POST['model']}', '{$fileName}')")) {
 				exit(json_encode(['status' => '1', 'message' => 'Скин успешно добавлен!']));
 			}
 		}
