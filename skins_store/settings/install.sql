@@ -17,10 +17,10 @@ START TRANSACTION;
     CREATE TABLE `skins__store`  (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `server_id` int(11) NULL,
+    `skin_id` int(9) NOT NULL,
     `name` varchar(255) NOT NULL,
     `price` int(11) NOT NULL,
-    `modelt` varchar(255) NOT NULL,
-    `modelct` varchar(255) NOT NULL,
+    `model_name` varchar(255) NOT NULL,
     `image` text NOT NULL,
     PRIMARY KEY (`id`),
     CONSTRAINT `skins__store` FOREIGN KEY (`server_id`) REFERENCES `servers` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
