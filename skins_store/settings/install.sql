@@ -1,4 +1,3 @@
-START TRANSACTION;
     CREATE TABLE `skins__purchases`  (
     `id` int(9) NOT NULL PRIMARY KEY,
     `user_id` int(9) NOT NULL,
@@ -32,6 +31,3 @@ START TRANSACTION;
     ('modules_extra/skins_store/base/index.php', 'skins_store', 'skins_store', 'Магазин игровых скинов', 'Магазин игровых скинов', 'skins_store,store', 1, 'files/miniatures/standart.jpg', 1, 1, 1, 1, @modile_id, 0, 0);
     INSERT INTO `pages` (`file`, `url`, `name`, `title`, `description`, `keywords`, `kind`, `image`, `robots`, `privacy`, `type`, `active`, `module`, `page`, `class`) VALUES
     ('modules_extra/skins_store/base/admin/index.php', 'admin/skins_store', 'admin_skins_store', 'Настройка магазина', 'none', 'skins_store,store', 1, 'files/miniatures/standart.jpg', 0, 0, 2, 1, @modile_id, 0, 0);
-
-
-COMMIT;
